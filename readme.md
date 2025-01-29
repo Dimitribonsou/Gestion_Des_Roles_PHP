@@ -1,4 +1,4 @@
-couleur principale : #008080
+
 projet conçu dans le cadre de ma formation en Développement web Avance avec le langage PHP le but est de pouvoir gerer les roles des utilisateurs a fin de pouvoir rediriger chacun utilisateur sur une interface spécifique en fonction de son rôle. Pour Palier a ce probleme 
 nous avons utilises les technologies suivante:
 -HTML5 pour definir la structure de la page web
