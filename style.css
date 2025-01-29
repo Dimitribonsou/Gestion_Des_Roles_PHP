@@ -1,0 +1,264 @@
+/* annuler la mise en forme par defaut de tout les balise html */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+/* definir les variables permettant de se rassurer que tout les elements ont les memes proprietes et faciliter la modification */
+:root
+{
+    --first-color:#008080;
+    --second-color:#F9D25B;
+    --green-color:#0ABB16;
+    --white-color:#fff;
+    --black-color:#000;
+    --font-text:"Montserrat"; 
+    --font-navbar:"Langar";
+    --font-title:"Lato"; 
+    --border-raduis:8px;
+}
+/* definir les proprietes de base de la balise body */
+body
+{
+   font-size: 16px; 
+   font-family:  sans-serif;
+   overflow-x: hidden;
+   background-color: var(--white-color);
+}
+/* definir la mise en forme de tout les boutons du projet */
+.btn
+{
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: var(--border-raduis);
+    background-color: var(--first-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-family: var(--font-text);
+}
+/* definir les proprietes lors du survole du boutton  */
+.btn:hover
+{
+    transform: scale(1.05);
+}
+/* definir la mise en forme pour le bouton permettant de contacter le service client */
+.btn.green
+{
+     background-color:var(--green-color) ;
+}
+.container
+{
+    width: 60vw;
+    height: fit-content;
+    min-width: 850px;
+    background-color: var(--first-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin: auto;
+    margin-top: 50px;
+}
+.container .img_block
+{
+    width: 48%;
+    height: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container .img_block img
+{
+    width: 70%;
+    height: 70%;
+}
+.container .form_block
+{
+     width:48%;
+     height:100%;
+     min-width: 400px;
+     background-color:#fff;
+     box-shadow: 2px 1px 2px var(--first-color);
+     padding: 25px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+}
+.header_profil
+{
+    color: var(--first-color);
+}
+.container .form_block form , .container .form_block .header
+{
+    width: 80%;
+    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+  margin-top: 10px;
+  /* margin-left: auto; */
+}
+.container .form_block .header>h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+.container .form_block .header>h3>strong{
+    font-style: italic;
+    color:var(--first-color);
+}
+.container .form_block form .input
+{
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+.container .form_block form .input> input,.container .form_block form .input> select,.container .form_block form .input> textarea
+{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #dad8d8f1;
+  outline: none;
+  text-indent: 25px;
+}
+.container .form_block form .input> input[type='submit']
+{
+    background-color: var(--first-color);
+    color: #fff;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.container .form_block form .input> input[type='submit']:hover
+{
+    transition: background 0.5s ease-in;
+    background-color: var(--second-color);
+}
+.container .form_block form .input> span
+{
+    margin-top: 10px;
+}
+.container .form_block form .input> span>a
+{
+    text-decoration: none;
+    color: var(--first-color);
+    margin-left: 10px;
+}
+.error
+{
+    color: red;
+}
+/* gerer des formulaires */
+@media screen and (max-width:900px) {
+    .container .img_block  
+    {
+        display: none;
+    }
+    .container
+    {
+        width: 80vw;
+        min-width: 300px;
+        justify-content: center;
+        background-color: transparent;
+    }
+    .container .form_block
+    {
+        width: 100%;
+        min-width: 300px;
+        padding: 10px;
+    }
+    .container .form_block form 
+    {
+        width: 100%;
+    }
+}
+
+/* mise en forme des differentes pages des utilisateurs*/
+main
+{
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     justify-content: space-around;
+    align-items: start;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+article
+{
+    width: 48%;
+    height: fit-content;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article h1 strong
+{
+    color: var(--first-color);
+}
+article h1 strong.nom
+{
+    color: var(--second-color);
+    text-transform: uppercase;
+}
+article img
+{
+    width: 80%;
+    height: 80%;
+}
+section
+{
+    padding: 25px;
+}
+section>a
+{
+    margin-top: 50px;
+}
+.flex
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: blue;
+}
+@media screen and (max-width:800px){
+    article
+    {
+        width: 100%;
+    }
+}
+/*Gerer la mise en forme de la liste*/
+.list-content
+{
+    margin-top: 50px;
+    width: 90vw;
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+.card
+{
+    width: 20%;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px var(--first-color);
+    padding: 25px;
+}
